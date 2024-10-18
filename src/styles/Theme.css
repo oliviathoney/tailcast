@@ -1,5 +1,4 @@
 /* Typography */
-
 .block-title {
   @apply text-primaryText text-3xl font-bold tracking-normal;
 }

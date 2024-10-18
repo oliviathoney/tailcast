@@ -4,6 +4,10 @@ import { motion } from "framer-motion";
 import { InvitationModal } from "./InvitationModal";
 import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
 
+import dryneedling from "../assets/images/Dry Needling.jpeg";
+import performance from "../assets/images/Performance.jpg";
+import recovery from "../assets/images/Recovery.jpeg";
+
 const pricingData = [
   "Seamless integration",
   "Real-time data visualization",
@@ -13,12 +17,12 @@ const pricingData = [
 ];
 
 export const Pricing = () => {
-  const [isMonthly, setIsMonthly] = useState(true);
+  // const [isMonthly, setIsMonthly] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleChange = () => {
-    setIsMonthly(!isMonthly);
-  };
+  // const handleChange = () => {
+  //   setIsMonthly(!isMonthly);
+  // };
 
   return (
     <section className="w-screen flex justify-center bg-bgDark2 relative">
@@ -32,15 +36,14 @@ export const Pricing = () => {
         >
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto text-center mb-16">
-              <span className="block-subtitle">Find Your Perfect Fit</span>
-              <h2 className="mt-6 mb-6 text-4xl lg:text-5xl font-bold font-heading text-primaryText">
-                Choose your best plan
+              <span className="block-subtitle">Get Your Perfect Treatment</span>
+              <h2 className="mt-6 mb-6 text-5xl lg:text-6xl font-bold font-heading text-primaryText font-NotoSerif">
+                Services We Offer
               </h2>
               <p className="mb-6 text-secondaryText">
-                Select the plan that suits your needs and benefit from our
-                analytics tools.
+                OVERTIME offers the best cutting-edge techniques to get you to your best self.
               </p>
-              <label className="mx-auto bg-bgDark3 relative flex justify-between items-center group text-xl w-44 h-12 rounded-lg pr-36 pl-1 cursor-pointer">
+              {/* <label className="mx-auto bg-bgDark3 relative flex justify-between items-center group text-xl w-44 h-12 rounded-lg pr-36 pl-1 cursor-pointer">
                 <input
                   type="checkbox"
                   className="peer appearance-none"
@@ -58,108 +61,144 @@ export const Pricing = () => {
                   </div>
                   <div className={isMonthly ? "text-gray-400" : ""}>Yearly</div>
                 </div>
-              </label>
+              </label> */}
             </div>
             <div className="flex flex-wrap flex-col lg:flex-row -mx-4 items-center mt-20">
-              <div className="w-[350px] sm:w-[380px] lg:w-1/3 px-4 mb-8 lg:mb-0">
-                <div className="p-8 bg-bgDark3 rounded-3xl">
-                  <h3 className="mb-2 text-xl font-bold font-heading text-primaryText text-left">
-                    Beginner
+              <div className="w-[350px] sm:w-[380px] lg:w-1/3 px-2 mb-8 lg:mb-0">
+                <div className="p-4 bg-bgDark3 rounded-3xl">
+                  <h3 className="p-4 mb-2 text-xl font-bold font-heading text-primaryText text-center">
+                    Physical Therapy
                   </h3>
                   <div className="flex justify-start items-end">
-                    <div className="text-4xl sm:text-5xl font-bold text-primaryText text-left mt-4 mr-2">
-                      $0
-                    </div>
-                    <div className="text-gray-500">
-                      {isMonthly ? "/ month" : "/ year"}
+                    <div className="rounded">
+                      <img
+                        src={dryneedling.src}
+                        alt="Feature image 1"
+                        className="rounded-xl  main-border-gray mx-auto sm:mx-unset"
+                        aria-label="Feature image 1"
+                      />
                     </div>
                   </div>
                   <p className="mt-4 mb-6 2xl:mb-10 text-gray-500 leading-loose text-left">
-                    The perfect way to get started and get used to our tools.
+                    Physical therapy ensures both short-term recovery and long-term success in
+                    an athlete's journey towards peak performance.
                   </p>
                   <ul className="mb-2 2xl:mb-6 text-primaryText">
-                    {pricingData.map((text, index) => (
-                      <li className="mb-4 flex" key={`${text}-${index}`}>
-                        <CheckArrowIcon />
-                        <span>{text}</span>
-                      </li>
-                    ))}
+                    <li className="mb-4 flex">
+                      <CheckArrowIcon />
+                      <span>Optimize strength, flexibility, and mobility</span>
+                    </li>
+                    <li className="mb-4 flex">
+                      <CheckArrowIcon />
+                      <span>Enhance performance while preventing setbacks</span>
+                    </li>
+                    <li className="mb-4 flex">
+                      <CheckArrowIcon />
+                      <span>Gain insight into proper techniques for sustained physical health</span>
+                    </li>
                   </ul>
-                  <button
+
+
+                  {/* <button
                     className="inline-block text-center py-2 px-4 w-full rounded-xl rounded-t-xl contained-button font-bold leading-loose mt-16"
                     onClick={() => setIsModalOpen(true)}
                     aria-label="Get started"
                   >
                     Get Started
-                  </button>
+                  </button> */}
                 </div>
               </div>
-              <div className="w-[350px] sm:w-[380px] lg:w-1/3 px-4 mb-8 lg:mb-0">
-                <div className="px-8 py-8 bg-bgDark3 rounded-3xl">
-                  <h3 className="mb-2 2xl:mb-4 text-2xl font-bold font-heading text-primaryText text-left">
-                    Standard
+              <div className="w-[350px] sm:w-[380px] lg:w-1/3 px-2 mb-8 lg:mb-0">
+                <div className="p-4 bg-bgDark3 rounded-3xl">
+                  <h3 className="p-4 mb-2 text-xl font-bold font-heading text-primaryText text-center">
+                    Performance Training
                   </h3>
                   <div className="flex justify-start items-end">
-                    <div className="text-4xl sm:text-5xl font-bold text-primaryText text-left mt-4 mr-2">
-                      {isMonthly ? "$19" : "$180"}
-                    </div>
-                    <div className="text-gray-500">
-                      {isMonthly ? "/ month" : "/ year"}
-                    </div>
-                  </div>
-                  <p className="mt-8 mb-8 2xl:mb-12 text-gray-500 leading-loose text-left">
-                    Unlock more features and elevate your data analysis.
-                  </p>
-                  <ul className="mb-14 text-primaryText">
-                    {pricingData.map((text, index) => (
-                      <li className="mb-4 flex" key={`${text}-${index}`}>
-                        <CheckArrowIcon />
-                        <span>{text}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <button
-                    className="inline-block text-center py-2 px-4 w-full contained-button leading-loose transition duration-200 mt-20"
-                    onClick={() => setIsModalOpen(true)}
-                    aria-label="Get started"
-                  >
-                    Get Started
-                  </button>
-                </div>
-              </div>
-              <div className="w-[350px] sm:w-[380px] lg:w-1/3 px-4 mb-8 lg:mb-0">
-                <div className="p-8 bg-bgDark3 rounded-3xl">
-                  <h3 className="mb-2 text-xl font-bold font-heading text-primaryText text-left">
-                    Premium
-                  </h3>
-                  <div className="flex justify-start items-end">
-                    <div className="text-4xl sm:text-5xl font-bold text-primaryText text-left mt-4 mr-2">
-                      {isMonthly ? "$36" : "$390"}
-                    </div>
-                    <div className="text-gray-500">
-                      {isMonthly ? "/ month" : "/ year"}
+                    <div className="rounded">
+                      <img
+                        src={performance.src}
+                        alt="Feature image 1"
+                        className="rounded-xl  main-border-gray mx-auto sm:mx-unset"
+                        aria-label="Feature image 1"
+                      />
                     </div>
                   </div>
                   <p className="mt-4 mb-6 2xl:mb-10 text-gray-500 leading-loose text-left">
-                    Experience the full power of our analytic platform
+                    With a focus on injury prevention and personalized guidance, athletes gain a competitive
+                    edge, unlocking their full potential and achieving new heights in their sports.
                   </p>
                   <ul className="mb-2 2xl:mb-6 text-primaryText">
-                    {pricingData.map((text, index) => (
-                      <li className="mb-4 flex" key={`${text}-${index}`}>
-                        <CheckArrowIcon />
-                        <span>{text}</span>
-                      </li>
-                    ))}
+                    <li className="mb-4 flex">
+                      <CheckArrowIcon />
+                      <span>Tailored workouts</span>
+                    </li>
+                    <li className="mb-4 flex">
+                      <CheckArrowIcon />
+                      <span>Enhance strength, agility, and sport-specific skills</span>
+                    </li>
+                    <li className="mb-4 flex">
+                      <CheckArrowIcon />
+                      <span>Optimize athletic potential, improve endurance, speed, and overall performance</span>
+                    </li>
                   </ul>
-                  <button
+                  {/* <button
                     className="inline-block text-center py-2 px-4 w-full rounded-xl rounded-t-xl contained-button font-bold leading-loose mt-16"
                     onClick={() => setIsModalOpen(true)}
                     aria-label="Get started"
                   >
                     Get Started
-                  </button>
+                  </button> */}
                 </div>
               </div>
+              <div className="w-[350px] sm:w-[380px] lg:w-1/3 px-2 mb-8 lg:mb-0">
+                <div className="p-4 bg-bgDark3 rounded-3xl">
+                  <h3 className="p-4 mb-2 text-xl font-bold font-heading text-primaryText text-center">
+                    Recovery
+                  </h3>
+                  <div className="flex justify-start items-end">
+                    <div className="rounded">
+                      <img
+                        src={recovery.src}
+                        alt="Feature image 1"
+                        className="rounded-xl  main-border-gray mx-auto sm:mx-unset"
+                        aria-label="Feature image 1"
+                      />
+                    </div>
+                  </div>
+                  <p className="mt-4 mb-6 2xl:mb-10 text-gray-500 leading-loose text-left">
+                    Prioritizing recovery is a strategic investment for athletes, ensuring
+                    sustained peak performance and long-term success in their sports.
+                  </p>
+                  <ul className="mb-2 2xl:mb-6 text-primaryText">
+                    <li className="mb-4 flex">
+                      <CheckArrowIcon />
+                      <span>Accelerated muscle repair, reduced fatigue, and injury prevention</span>
+                    </li>
+                    <li className="mb-4 flex">
+                      <CheckArrowIcon />
+                      <span>Enhance focus and resilience</span>
+                    </li>
+                    <li className="mb-4 flex">
+                      <CheckArrowIcon />
+                      <span>Optimize physical healing and mental well-being</span>
+                    </li>
+                  </ul>
+                  {/* <button
+                    className="inline-block text-center py-2 px-4 w-full rounded-xl rounded-t-xl contained-button font-bold leading-loose mt-16"
+                    onClick={() => setIsModalOpen(true)}
+                    aria-label="Get started"
+                  >
+                    Get Started
+                  </button> */}
+                </div>
+              </div>
+              {/* <a className="pt-8 mx-auto justify-center block-subtitle text-secondaryColor" id="address" href="/about">View More</a> */}
+              <div className="pt-8 justify-center mx-auto">
+                <p className="text-secondaryText block-subtitle leading-loose">
+                  <a id="address" href="/about">View More</a>
+                </p>
+              </div>
+
             </div>
           </div>
         </motion.div>

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 import { InvitationModal } from "./InvitationModal";
-import featuresdiagonal from "../assets/images/featuresdiagonal.jpg";
+import gym from "../assets/images/gym-2.jpg";
 
 export const FeaturesDiagonal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -31,30 +31,52 @@ export const FeaturesDiagonal = () => {
       >
         <div className=" 2xl:w-[1150px] xl:w-[1050px]  md:w-4/5 flex justify-center bg-bgDark1 pt-12 lg:pt-24 pb-8 lg:pb-20 mx-auto lg:flex-row flex-col">
           <div className="w-3/4 lg:w-1/2 flex flex-col lg:mx-unset mx-auto">
-            <span className="block-subtitle">Accelerate Your Success</span>
-            <h2 className="mt-10 mb-8 text-4xl lg:text-5xl block-big-title">
-              Build &amp; Launch without problems
+            <span className="block-subtitle">Where We Are</span>
+            <h2 className="mt-2 mb-8 text-5xl lg:text-6xl block-big-title font-NotoSerif">
+              About Our Practice
             </h2>
             <p className="mb-16 text-secondaryText leading-loose">
-              Our platform enables you to launch your data-driven projects with
-              ease. Boost productivity and achieve better results. Empower your
-              decision-making with advanced analytics
+              At OVERTIME Sports Physical Therapy and Performance, our commitment to your health and wellness goes beyond the conventional. Led by our experienced Doctor of Physical Therapy, we offer a distinctive and personalized approach to your well-being. Our comprehensive suite of services encompasses not only rehabilitation and recovery but also injury prevention and performance training. Whether you're on the path to recovery, striving to maintain peak health throughout the season, or looking to elevate your athletic performance, we are your dedicated partners throughout this journey.
+              <br></br>
+              <br></br>
+              At OVERTIME, we take immense pride not just in getting you back to your desired activity but also in providing you with the knowledge and tools for sustained well-being. We go the extra mile by educating you on practices that increase longevity, minimize the risk of future injuries, and keep you at the top of your game. Your success is our success, and we're here to empower you with the holistic care and expertise you deserve. Welcome to a new dimension of health and athletic achievement at OVERTIME Sports Physical Therapy and Performance.
+              <br></br>
+              <br></br>
+              OVERTIME Sports PT and Performance services anyone in the Denver metro area, including Highlands Ranch, Centennial, Greenwood Village, Castle Pines, Littleton, Englewood, Cherry Creek, Glendale, Cherry Hills and Castle Rock.
+
             </p>
-            <button
-              className="w-[210px] h-12 contained-button mr-10 "
-              onClick={() => setIsModalOpen(true)}
-              aria-label="Get started"
-            >
-              Get Started
-            </button>
           </div>
-          <div className="w-4/5 lg:w-1/2 lg:pl-16 flex justify-center mx-auto pt-16 lg:pt-0">
+          {/* <div className="w-3/5 mb-4 py-3 md:pl-3 md:pr-20 lg:pr-12 rounded"> */}
+          <div className="w-4/5 lg:w-1/2 lg:pl-16 justify-center mx-auto">
+            <img
+              src={gym.src}
+              alt="OVERTIME Gym"
+              className="rounded-xl  main-border-gray"
+            />
+            <div className="pt-16">
+              <iframe
+                src="https://snazzymaps.com/embed/583225"
+                width="100%"
+                height="400px"
+                className="rounded-xl  main-border-gray"
+              >
+              </iframe>
+              <div class="pt-16 justify-center mx-auto">
+                <span class="block-subtitle">VISIT US AT:</span>
+                <p class="text-secondaryText leading-loose"><a id="address" href="https://maps.app.goo.gl/Ng3fLwf8KgRr15k29"
+                  target="_blank">8085 South Chester Street
+                  Unit #240, Centennial, CO 80112</a></p>
+                <p class="text-secondaryText leading-loose">(Located inside of Factum Performance and Wellness)</p>
+              </div>
+            </div>
+          </div>
+          {/* <div className="w-4/5 lg:w-1/2 lg:pl-16 flex justify-center mx-auto pt-16 lg:pt-0">
             <img
               src={featuresdiagonal.src}
               alt="Feature image"
               className="rounded-xl  main-border-gray"
             />
-          </div>
+          </div> */}
         </div>
       </motion.div>
       <div className="shape-divider-top-1665696661 w-full">

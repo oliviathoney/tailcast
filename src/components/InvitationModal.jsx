@@ -2,7 +2,6 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
 import { CloseIcon } from "../assets/icons/CloseIcon";
-import { TailcastLogo } from "../assets/logos/TailcastLogo";
 
 export const InvitationModal = ({ setIsOpen }) => (
   <AnimatePresence>
@@ -23,39 +22,38 @@ export const InvitationModal = ({ setIsOpen }) => (
           <div className="flex relative">
             <div className="w-1/2 hidden lg:inline">
               <h2 className="mt-6 mb-2 text-5xl font-bold tracking-normal text-primaryText">
-                Subscribe Now
+                Request a Free Consultation
               </h2>
-              <h2 className="text-5xl font-bold tracking-normal text-secondaryColor">
-                Winter is coming
-              </h2>
+              {/* <h2 className="text-5xl font-bold tracking-normal text-secondaryColor">
+                Free Consultation
+              </h2> */}
 
               <ul className="mb-6 text-primaryText mt-12">
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
-                  <span>Vestibulum viverra</span>
+                  <span>15 minute phone consultation</span>
                 </li>
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
-                  <span>Morbi mollis metus pretium</span>
+                  <span>Talk with a physical therapist about your treatment</span>
                 </li>
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
-                  <span>Etiam lectus nunc, commodo</span>
+                  <span>Schedule a full appointment</span>
                 </li>
               </ul>
             </div>
             <div className="w-full lg:w-1/2 flex items-center flex-col justify-center pt-24 sm:pt-0">
-              <div className="flex inline lg:hidden justify-start items-center grow basis-0 mb-8 pr-6">
-                <div className="text-white mr-2 text-8xl">
-                  <TailcastLogo />
-                </div>
+              <div className="flex lg:hidden justify-start items-center grow basis-0 mb-8">
                 <div className="text-white font-['Inter'] font-bold text-3xl">
-                  Tailcast
+                  <h2>
+                    Request a Free Consultation
+                  </h2>
                 </div>
               </div>
 
               <h3 className="mb-7 text-2xl text-primaryText font-bold leading-snug text-center">
-                Join 3,953 other developers
+                Rehab, Recover, Perform
               </h3>
               <div className="flex flex-wrap -m-2">
                 <div className="w-full sm:w-4/5 p-2 mx-auto">
@@ -70,9 +68,9 @@ export const InvitationModal = ({ setIsOpen }) => (
                   <button
                     className="py-4 px-6 w-full text-primaryText font-semibold rounded-xl shadow-4xl focus:ring focus:ring-indigo-300 bg-primaryColor hover:bg-[#7274f3] transition ease-in-out duration-200"
                     type="button"
-                    aria-label="Join now"
+                    aria-label="Request"
                   >
-                    Join Now
+                    Request Consultation
                   </button>
                 </div>
               </div>

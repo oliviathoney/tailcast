@@ -9,25 +9,26 @@ import { FeaturesDiagonal } from '../components/FeaturesDiagonal.jsx'
 import { Pricing } from '../components/Pricing.jsx'
 import { FAQ } from '../components/FAQ.jsx'
 import { Brands } from '../components/Brands.jsx'
-import { Blog } from '../components/Blog'
+import { Blog } from '../components/Blog.jsx'
+import { AppointmentForm } from '../components/AppointmentForm'
 import { Footer } from '../components/Footer.jsx'
-import { ScrollUpButton } from '../components/ScrollUpButton'
+import { ScrollUpButton } from '../components/ScrollUpButton.jsx'
 import '../styles/Theme.css'
 import '../styles/Diagonals.css'
-import '../styles/custom.css'
 ---
 
-<Layout title="OVERTIME Sports Home">
+<Layout title="OVERTIME Sports Client Resources">
   <Navbar client:load />
-  <Hero client:load />
-  <Features1 client:load />
+  <!-- <Hero client:load /> -->
+  <!-- <Features1 client:load /> -->
   <!-- <MeetTheTeam client:load /> -->
   <!-- <FeaturesDiagonal client:load /> -->
-  <Pricing client:load />
+  <!-- <Pricing client:load /> -->
   <!-- <Brands client:load /> -->
-  <Testimonials client:load />
+  <!-- <Testimonials client:load /> -->
   <!-- <Blog client:load /> -->
-  <!-- <FAQ client:load />  -->
+  <FAQ client:load /> 
+  <AppointmentForm client:load />
   <Footer />
   <ScrollUpButton client:load />
 </Layout>
